@@ -1,19 +1,13 @@
-
+import React from 'react';
 import './App.css';
-// import FunctionalCompo from './FunctionalCompo';
-// import ClassCompo from './ClassCompo';
-function App() {
-  let courseName = 'React Library';
-  function apple() {
-    courseName = 'Python';
-    alert(courseName);
-  }
+import Student from './Student';
+
+function App(){
   return (
     <div className="App">
-      <h1>{courseName}</h1>
-      <button onClick={apple}>Click Me</button>
-      {/* <FunctionalCompo/>
-      <ClassCompo/> */}
+      <Student name={"Pradip"} email={"Pradip@gmail.com"}/>
+      <Student name={"Mask"} email={"Mask@gmail.com"}/>
+      <Student name={"Jarvis"} email={"Jarvis@gmail.com"}/>
     </div>
   );
 }

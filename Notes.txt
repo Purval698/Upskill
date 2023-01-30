@@ -1,0 +1,68 @@
+i) learned what is Functional and Class Components.
+
+ii) Learned the Click Event and Functions in Reactjs.
+
+3) State in Functional Component:-(State is Public) It is nothing but object and we can store data in it.
+ Example of State in Functional Component:
+ function App() {
+  const [data,setData] =useState(0);   
+  function updateData()
+  {
+    setData(data+1);                            /This is the updated value by using State.
+  }
+  console.warn("-----------------------------------");
+  return (
+    <div className="App">
+      <h1>{data}</h1>
+      <button onClick = {updateData}>Update</button>
+    </div>
+
+
+4) State in Class Component:-(State is Public) State is nothing but data container.variable does not update 
+the value so we use State.
+Example of State in Class Component:-
+class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      data: 'Anil'
+    }
+  }
+  apple() {
+    this.setState({ data: 'Abhijeet' })
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1>{this.state.data}</h1>
+        <button onClick={() => this.apple()}>Update</button>
+      </div>
+    );
+  }
+}
+
+5) Props with Functional Component:- If we have to pass the data inside the component then we use the Props.
+Example:-
+##App.js File
+return (
+    <div className="App">
+      <Student name={"Pradip"} email={"Pradip@gmail.com"}/>
+      <Student name={"Mask"} email={"Mask@gmail.com"}/>
+      <Student name={"Jarvis"} email={"Jarvis@gmail.com"}/>
+    </div>
+  );
+##Student.js File
+function Student(props){
+    console.log(props);
+    return(
+            <div style={{backgroundColor:"skyblue",margin:10,padding:8}}>
+                <h1>Student Name is {props.name}</h1>
+                <h1> Email is {props.email}</h1>
+            </div>
+    )
+}
+
+export default Student;
+
+7) 
