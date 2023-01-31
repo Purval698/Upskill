@@ -65,4 +65,4 @@ function Student(props){
 
 export default Student;
 
-7) 
+7) Props with Class Component:-Props are used store data and to pass data.
