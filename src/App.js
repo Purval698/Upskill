@@ -1,11 +1,34 @@
 import React, { useState } from 'react';
 import './App.css';
+import User from './User'
 
 
 function App() {
+
+  const users = [
+    {
+      name: 'John',email: 'john@example.com',contact:123
+    },
+    {
+      name: 'Sam',email: 'sam@example.com',contact:456
+    },
+    {
+      name: 'Rex',email: 'rex@example.com',contact:789
+    },
+    {
+      name: 'Kat',email: 'kat@example.com',contact:121
+    }
+  ]
+
   return (
     <div className="App">
-        <h1>Conditional Rendering || If condition</h1>
+        <h1>Reuse Component in Loop</h1>
+        {
+          users.map((user,i)=> 
+          <User data={user} />
+
+          )
+        }
     </div>
   )
 }
